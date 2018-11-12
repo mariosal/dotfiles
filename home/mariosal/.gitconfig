@@ -1,0 +1,20 @@
+[user]
+	name = Mario Saldinger
+	email = mariosal@skroutz.gr
+[core]
+	autocrlf = input
+	quotePath = false
+	pager = diff-so-fancy | less --tabs=2 -RFX
+[fetch]
+	prune = true
+[url "git@github.skroutz.gr:"]
+	insteadOf = skroutz:
+	insteadOf = deploy:
+[alias]
+	patch = !git --no-pager diff --no-color
+[rebase]
+	autosquash = true
+[pull]
+	rebase = true
+[color]
+	ui = true

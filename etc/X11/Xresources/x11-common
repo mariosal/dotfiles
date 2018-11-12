@@ -1,0 +1,16 @@
+! $Id$
+
+! load color-specific resources for clients that have them
+#ifdef COLOR
+*customization: -color
+#endif
+
+Xft.antialias: 1
+Xft.hinting: 1
+Xft.hintstyle: hintslight
+Xft.autohint: 0
+Xft.rgba: none
+
+! make Xaw (Athena widget set) clients understand the delete key
+! this causes problems with some non-Xaw apps, use with care
+! *Text.translations: #override ~Shift ~Meta <Key>Delete: delete-next-character()
