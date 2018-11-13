@@ -1,4 +1,4 @@
-(prelude-require-packages '(google-c-style emojify robe rbenv))
+(prelude-require-packages '(google-c-style emojify robe rbenv color-theme-sanityinc-tomorrow))
 (add-hook 'after-init-hook #'global-prettify-symbols-mode)
 (add-hook 'after-init-hook #'global-emojify-mode)
 (add-hook 'ruby-mode-hook 'robe-mode)
