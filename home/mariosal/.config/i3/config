@@ -183,17 +183,21 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
+        status_command i3blocks
         position top
         tray_output DP-1-1
         tray_output eDP-1
-        status_command i3blocks
+        tray_padding 0
 }
 
 workspace_auto_back_and_forth yes
 bindsym $mod+Ctrl+l $execi i3lock
 
-#bindsym XF86MonBrightnessUp $execi xbacklight -inc 5
-#bindsym XF86MonBrightnessDown $execi xbacklight -dec 5
+set $current_brightness `cat /sys/class/backlight/intel_backlight/brightness`
+set $unit_brightness `printf '%.0f\n' $(($(cat /sys/class/backlight/intel_backlight/max_brightness) / 10))`
+
+bindsym XF86MonBrightnessUp $execi echo $(($current_brightness + $unit_brightness)) > /sys/class/backlight/intel_backlight/brightness
+bindsym XF86MonBrightnessDown $execi echo $(($current_brightness - $unit_brightness)) > /sys/class/backlight/intel_backlight/brightness
 bindsym XF86AudioRaiseVolume $execi amixer -q -D pulse sset Master 5%+ unmute && pkill -RTMIN+10 i3blocks
 bindsym XF86AudioLowerVolume $execi amixer -q -D pulse sset Master 5%- unmute && pkill -RTMIN+10 i3blocks
 bindsym XF86AudioMute $execi amixer -q -D pulse sset Master toggle && pkill -RTMIN+10 i3blocks
