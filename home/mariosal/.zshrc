@@ -119,11 +119,11 @@ upgrade() {
   cd ~/.rbenv/plugins/ruby-build && gl
   cd ~/yogurt && bufo reset
   gem update --system
-  gem update bundler rubocop
+  gem update bundler rubocop fasterer
   tldr --update
   ncu -g
   rbenv install --list | grep -P " 2.3.*$" | tail -1 | grep -v "2.3.8$"
-  nvm ls-remote | grep "Latest LTS" | tail -1 | grep -v '\->'
+  nvm ls-remote | grep "Latest LTS: Carbon" | grep -v '\->'
 }
 
 fontclear() {
