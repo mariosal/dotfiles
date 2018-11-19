@@ -1,5 +1,5 @@
 #------------------------------------------------------------------------------#
-#                   OFFICIAL DEBIAN REPOS                    
+#                   OFFICIAL DEBIAN REPOS
 #------------------------------------------------------------------------------#
 
 ###### Debian Main Repos
@@ -13,7 +13,7 @@ deb http://deb.debian.org/debian-security testing/updates main
 deb-src http://deb.debian.org/debian-security testing/updates main
 
 #------------------------------------------------------------------------------#
-#                      UNOFFICIAL  REPOS                       
+#                      UNOFFICIAL  REPOS
 #------------------------------------------------------------------------------#
 
 ###### 3rd Party Binary Repos
