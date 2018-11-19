@@ -11,6 +11,9 @@ Documentation:
 Style/ClassAndModuleChildren:
   EnforcedStyle: compact
 
+Style/EachWithObject:
+  Enabled: false
+
 Style/NegatedIf:
   Enabled: false
 
