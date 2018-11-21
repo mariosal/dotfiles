@@ -19,17 +19,7 @@
   browse-url-browser-function 'browse-url-chromium
   helm-mode-fuzzy-match                 t
   helm-completion-in-region-fuzzy-match t
-  helm-recentf-fuzzy-match              t
-  helm-buffers-fuzzy-matching           t
-  helm-locate-fuzzy-match               t
-  helm-M-x-fuzzy-match                  t
-  helm-semantic-fuzzy-match             t
-  helm-imenu-fuzzy-match                t
-  helm-apropos-fuzzy-match              t
-  helm-lisp-fuzzy-completion            t
-  helm-session-fuzzy-match              t
-  web-mode-enable-auto-quoting          nil
-  helm-etags-fuzzy-match                t)
+  web-mode-enable-auto-quoting          nil)
 
 (add-hook 'c-mode-common-hook 'google-set-c-style)
 (add-to-list 'auto-mode-alist '("\\.s?css\\(\\.erb\\)?\\'"  . web-mode))
