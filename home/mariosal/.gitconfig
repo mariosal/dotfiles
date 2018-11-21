@@ -18,3 +18,5 @@
 	rebase = true
 [color]
 	ui = true
+[hub]
+	host = github.skroutz.gr
