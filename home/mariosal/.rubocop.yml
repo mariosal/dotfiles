@@ -20,5 +20,8 @@ Style/NegatedIf:
 Style/NegatedWhile:
   Enabled: false
 
+Style/NumericPredicate:
+  EnforcedStyle: comparison
+
 Metrics/BlockLength:
   ExcludedMethods: ['describe', 'context']
