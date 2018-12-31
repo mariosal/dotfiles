@@ -17,8 +17,11 @@ deb-src http://deb.debian.org/debian-security testing/updates main
 #------------------------------------------------------------------------------#
 
 ###### 3rd Party Binary Repos
-###Spotify
-deb http://repository.spotify.com stable non-free
-
 ###Docker
 deb [arch=amd64] https://download.docker.com/linux/debian buster stable
+
+###Signal Desktop
+deb [arch=amd64] https://updates.signal.org/desktop/apt xenial main
+
+###Spotify
+deb http://repository.spotify.com stable non-free
