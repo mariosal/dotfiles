@@ -128,11 +128,12 @@ assign [class="Thunderbird"] 1
 assign [class="Gnome-terminal"] 2
 assign [class="Chromium"] 3
 assign [class="Emacs"] 4
+for_window [class="Tor Browser"] floating enabled
 
 $execi gnome-terminal
 $execi thunderbird
 $execi chromium
-$execi emacs --daemon && emacsclient -c
+$execi sleep 5 && emacsclient -c
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $ws1
