@@ -108,7 +108,7 @@ cl() {
 }
 
 ccl() {
-  $CXX ${=CPPFLAGS} ${=CXXFLAGS} ${=LDFLAGS} -pedantic-errors -std=c++17 -g -Weverything $@ ${=LDLIBS}
+  $CXX ${=CPPFLAGS} ${=CXXFLAGS} ${=LDFLAGS} -pedantic-errors -std=c++11 -g -Weverything $@ ${=LDLIBS}
 }
 
 upgrade() {
