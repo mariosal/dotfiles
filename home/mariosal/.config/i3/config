@@ -194,7 +194,7 @@ bar {
 }
 
 workspace_auto_back_and_forth yes
-bindsym $mod+Ctrl+l $execi i3lock
+bindsym $mod+Ctrl+l $execi i3lock -ef
 
 set $current_brightness `cat /sys/class/backlight/intel_backlight/brightness`
 set $unit_brightness `printf '%.0f\n' $(($(cat /sys/class/backlight/intel_backlight/max_brightness) / 10))`
