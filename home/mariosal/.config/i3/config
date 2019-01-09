@@ -128,12 +128,14 @@ assign [class="Thunderbird"] 1
 assign [class="Gnome-terminal"] 2
 assign [class="Chromium"] 3
 assign [class="Emacs"] 4
+assign [class="Spotify"] 0
 for_window [class="Tor Browser"] floating enabled
 
 $execi gnome-terminal
 $execi thunderbird
 $execi chromium
-$execi sleep 5 && emacsclient -c
+$execi spotify
+$execi sleep 5 && /home/mariosal/.oh-my-zsh/plugins/emacs/emacsclient.sh
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $ws1
