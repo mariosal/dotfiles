@@ -2,23 +2,29 @@ AllCops:
   TargetRubyVersion: 2.3
   TargetRailsVersion: 5.1
 
-Style/FrozenStringLiteralComment:
-  Enabled: false
-
 Documentation:
   Enabled: false
 
 Style/ClassAndModuleChildren:
   EnforcedStyle: compact
 
+Style/DoubleNegation:
+  Enabled: false
+
 Style/EachWithObject:
   Enabled: false
+
+Style/FrozenStringLiteralComment:
+  EnforcedStyle: never
 
 Style/NegatedIf:
   Enabled: false
 
 Style/NegatedWhile:
   Enabled: false
+
+Style/NilComparison:
+  EnforcedStyle: comparison
 
 Style/NumericPredicate:
   EnforcedStyle: comparison
