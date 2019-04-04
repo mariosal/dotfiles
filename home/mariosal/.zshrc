@@ -112,7 +112,7 @@ ccl() {
 }
 
 upgrade() {
-  sudo zsh -c 'apt update && apt -y full-upgrade && apt -y autoremove && apt -y clean && update-command-not-found && fwupdmgr refresh && fwupdmgr update'
+  sudo zsh -c 'apt update && apt -y full-upgrade && apt -y autoremove && apt -y clean && fwupdmgr refresh && fwupdmgr update'
   upgrade_oh_my_zsh
   cd ~/.nvm && gl
   cd ~/.rbenv && gl
