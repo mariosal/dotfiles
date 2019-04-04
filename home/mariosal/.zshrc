@@ -119,7 +119,7 @@ upgrade() {
   cd ~/.rbenv/plugins/ruby-build && gl
   cd ~/yogurt && bufo reset
   gem update --system
-  gem update bundler rubocop fasterer
+  gem update bundler rubocop rubocop-performance fasterer
   tldr --update
   ncu -g
   rbenv install --list | grep -P " 2.3.*$" | tail -1 | grep -v "2.3.8$"
