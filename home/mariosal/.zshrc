@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=/usr/lib/llvm-7/bin:$PATH
+export PATH=/usr/lib/llvm-7/bin:$PATH:$HOME/go/bin
 
 # Path to your oh-my-zsh installation.
   export ZSH="/home/mariosal/.oh-my-zsh"
