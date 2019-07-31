@@ -128,7 +128,7 @@ assign [class="Thunderbird"] 1
 assign [class="Gnome-terminal"] 2
 assign [class="Chromium"] 3
 assign [class="Emacs"] 4
-assign [class="Spotify"] 10
+for_window [class="Spotify"] move to workspace 10
 for_window [class="Tor Browser"] floating enabled
 
 $execi gnome-terminal
