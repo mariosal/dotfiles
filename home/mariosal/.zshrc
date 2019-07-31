@@ -114,6 +114,7 @@ ccl() {
 upgrade() {
   sudo zsh -c 'apt update && apt -y full-upgrade && apt -y autoremove && apt -y clean && fwupdmgr refresh && fwupdmgr update'
   upgrade_oh_my_zsh
+  cd ~/.emacs.d && gl
   cd ~/.nvm && gl
   cd ~/.rbenv && gl
   cd ~/.rbenv/plugins/ruby-build && gl
@@ -130,6 +131,14 @@ fontclear() {
   sudo zsh -c 'fc-cache -f && dpkg-reconfigure fontconfig'
   fc-cache -f
   rm -rf ~/.cache/fontconfig
+}
+
+es() {
+  command emacs --daemon --insecure && emacs
+}
+
+ek() {
+  killall emacs
 }
 
 alias rm='rm -i'

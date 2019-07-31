@@ -135,7 +135,6 @@ $execi gnome-terminal
 $execi thunderbird
 $execi chromium
 $execi spotify
-$execi sleep 5 && /home/mariosal/.oh-my-zsh/plugins/emacs/emacsclient.sh
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $ws1
