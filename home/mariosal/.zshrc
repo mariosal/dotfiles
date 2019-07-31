@@ -62,7 +62,7 @@ ZSH_THEME="gentoo"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(bundler copyfile emacs extract gitfast git-extras gitignore nvm rails rbenv thefuck)
+plugins=(bundler copyfile emacs extract git gitfast git-extras gitignore nvm rails rbenv thefuck)
 
 source $ZSH/oh-my-zsh.sh
 
