@@ -139,7 +139,7 @@ es() {
 }
 
 ek() {
-  killall emacs
+  killall -9 emacs
 }
 
 alias rm='rm -i'
