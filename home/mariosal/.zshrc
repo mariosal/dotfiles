@@ -115,6 +115,7 @@ upgrade() {
   sudo zsh -c 'apt update && apt -y full-upgrade && apt -y autoremove && apt -y clean && fwupdmgr refresh && fwupdmgr update'
   upgrade_oh_my_zsh
   cd ~/.emacs.d && gl
+  command emacs --batch -l ~/.emacs.d/init.el --eval="(configuration-layer/update-packages t)"
   cd ~/.nvm && gl
   cd ~/.rbenv && gl
   cd ~/.rbenv/plugins/ruby-build && gl
