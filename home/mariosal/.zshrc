@@ -147,6 +147,8 @@ alias l="ls -lah --group-directories-first"
 alias val='valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes --verbose'
 alias by='bi && yarn'
 alias o='xdg-open'
+alias rs='bin/rails server webrick -b 0.0.0.0 -p 3000'
+alias ys='overmind s -l webpack,webpack-ssr,hypernova'
 alias diff='colordiff'
 alias stg='ssh wowbagger@vms.skroutz.gr'
 
