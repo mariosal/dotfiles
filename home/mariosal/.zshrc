@@ -62,7 +62,7 @@ DISABLE_AUTO_UPDATE="false"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(bundler copyfile emacs extract git gitfast git-extras gitignore nvm rails rbenv thefuck)
+plugins=(bundler colored-man-pages copyfile emacs extract git gitfast git-extras gitignore nvm rails rbenv thefuck)
 
 source $ZSH/oh-my-zsh.sh
 
