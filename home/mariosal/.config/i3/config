@@ -124,7 +124,7 @@ workspace 3 output DP-1-1
 workspace 4 output DP-1-1
 workspace 10 output eDP-1
 
-assign [class="Thunderbird"] 1
+assign [class="thunderbird"] 1
 assign [class="Gnome-terminal"] 2
 assign [class="Chromium"] 3
 assign [class="Emacs"] 4
