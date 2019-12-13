@@ -44,10 +44,12 @@ This function should only modify configuration layer settings."
        copy-as-format
        emacs-lisp
        git
+       github
        helm
        html
        (javascript :variables
-         node-add-modules-path t)
+         node-add-modules-path t
+         javascript-backend 'nil)
        json
        markdown
        react
@@ -56,6 +58,7 @@ This function should only modify configuration layer settings."
          ruby-test-runner 'rspec
          ruby-version-manager 'rbenv)
        syntax-checking
+       sql
        treemacs
        yaml
      )
