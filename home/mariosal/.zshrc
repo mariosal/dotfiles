@@ -124,7 +124,7 @@ upgrade() {
   cd ~/.rbenv && gl
   cd ~/.rbenv/plugins/ruby-build && gl
   gem update --system
-  gem update bundler rubocop rubocop-performance rubocop-rails fasterer
+  gem update bundler rubocop rubocop-performance rubocop-rails rubocop-rspec fasterer
   tldr --update
   ncu -g
   rbenv install --list | grep -P " 2.3.*$" | tail -1 | grep -v "2.3.8$"
