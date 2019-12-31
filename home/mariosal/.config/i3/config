@@ -195,12 +195,15 @@ bar {
 workspace_auto_back_and_forth no
 bindsym $mod+Ctrl+l $execi i3lock -ef
 
-bindsym XF86MonBrightnessUp $execi brightnessctl s +10%
-bindsym XF86MonBrightnessDown $execi brightnessctl s 10%-
 bindsym XF86AudioRaiseVolume $execi amixer -q -D pulse sset Master 5%+ unmute && pkill -RTMIN+10 i3blocks
 bindsym XF86AudioLowerVolume $execi amixer -q -D pulse sset Master 5%- unmute && pkill -RTMIN+10 i3blocks
 bindsym XF86AudioMute $execi amixer -q -D pulse sset Master toggle && pkill -RTMIN+10 i3blocks
 bindsym XF86AudioMicMute $execi amixer -q -D pulse sset Capture toggle
+bindsym XF86MonBrightnessDown $execi brightnessctl set 5%-
+bindsym XF86MonBrightnessUp $execi brightnessctl set +5%
+bindsym XF86AudioPlay $execi playerctl play-pause
+bindsym XF86AudioNext $execi playerctl next
+bindsym XF86AudioPrev $execi playerctl previous
 
 new_window none
 
