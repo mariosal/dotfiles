@@ -4,7 +4,7 @@
 
 XKBMODEL="pc105"
 XKBLAYOUT="us,gr"
-XKBVARIANT=","
+XKBVARIANT=""
 XKBOPTIONS="ctrl:nocaps,grp:win_space_toggle,terminate:ctrl_alt_bksp"
 
 BACKSPACE="guess"

@@ -159,7 +159,6 @@ alias stg='ssh wowbagger@vms.skroutz.gr'
 alias yo='cd ~/yogurt'
 
 source /usr/share/doc/fzf/examples/key-bindings.zsh
-source /usr/share/doc/fzf/examples/completion.zsh
 
 if [ -n "$DESKTOP_SESSION" ];then
   eval $(gnome-keyring-daemon --start)
