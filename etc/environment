@@ -1,5 +1,4 @@
 VDPAU_DRIVER=va_gl
-CHROME_BIN=chromium
 CFLAGS="-march=native -O3 -pipe -flto"
 CXXFLAGS="-march=native -O3 -pipe -flto"
 LDFLAGS="-march=native -O3 -pipe -flto -fuse-ld=gold"
