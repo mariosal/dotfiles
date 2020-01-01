@@ -1,3 +1,4 @@
+LIBVA_DRIVER_NAME=iHD
 VDPAU_DRIVER=va_gl
 CFLAGS="-march=native -O3 -pipe -flto"
 CXXFLAGS="-march=native -O3 -pipe -flto"
