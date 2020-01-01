@@ -5,4 +5,3 @@ CXXFLAGS="-march=native -O3 -pipe -flto"
 LDFLAGS="-march=native -O3 -pipe -flto -fuse-ld=gold"
 FZF_DEFAULT_COMMAND="rg --files"
 RUBY_CONFIGURE_OPTS=--disable-install-doc
-QT_AUTO_SCREEN_SCALE_FACTOR=0
