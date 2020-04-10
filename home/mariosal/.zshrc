@@ -68,7 +68,7 @@ HIST_STAMPS="yyyy-mm-dd"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(bundler colored-man-pages copyfile emacs extract git gitfast git-extras gitignore nvm rails rbenv zsh_reload)
+plugins=(bundler colored-man-pages copyfile emacs extract fzf git gitfast git-extras gitignore nvm rails rbenv)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -124,11 +124,11 @@ upgrade() {
   cd ~/.rbenv && gl
   cd ~/.rbenv/plugins/ruby-build && gl
   gem update --system
-  gem update bundler rubocop rubocop-performance rubocop-rails rubocop-rspec fasterer
+  gem update fasterer
   tldr --update
   ncu -g
   rbenv install --list | grep -P " 2.3.*$" | tail -1 | grep -v "2.3.8$"
-  nvm ls-remote | grep "Latest LTS: Carbon" | grep -v '\->'
+  nvm ls-remote | grep "Latest LTS: Dubnium" | grep -v '\->'
   cd ~/yogurt && bufo reset
 }
 
@@ -157,8 +157,7 @@ alias diff='colordiff'
 alias stg='ssh wowbagger@vms.skroutz.gr'
 
 alias yo='cd ~/yogurt'
-
-source /usr/share/doc/fzf/examples/key-bindings.zsh
+alias lossless='~/Downloads/LosslessCut-linux/losslesscut --no-sandbox'
 
 if [ -n "$DESKTOP_SESSION" ];then
   eval $(gnome-keyring-daemon --start)
