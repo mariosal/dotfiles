@@ -207,7 +207,7 @@ bindsym XF86AudioPrev $execi playerctl previous
 
 new_window none
 
-$execi compton
+$execi compton -d :0
 $execi nm-applet
 $execi blueman-applet
 $execi xset -b
