@@ -1,7 +1,7 @@
 LIBVA_DRIVER_NAME=iHD
 VDPAU_DRIVER=va_gl
+GST_VAAPI_ALL_DRIVERS=1
 CFLAGS="-march=native -O3 -pipe -flto"
 CXXFLAGS="-march=native -O3 -pipe -flto"
 LDFLAGS="-march=native -O3 -pipe -flto -fuse-ld=gold"
-FZF_DEFAULT_COMMAND="rg --files"
 RUBY_CONFIGURE_OPTS=--disable-install-doc
