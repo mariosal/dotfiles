@@ -117,7 +117,7 @@ ccl() {
 
 upgrade() {
   sudo zsh -c 'apt update && apt -y full-upgrade && apt -y autoremove && apt -y clean && fwupdmgr refresh && fwupdmgr update'
-  upgrade_oh_my_zsh
+  omz update
   cd ~/.emacs.d && gl
   command emacs --batch -l ~/.emacs.d/init.el --eval="(configuration-layer/update-packages t)"
   cd ~/.nvm && gl
@@ -127,7 +127,7 @@ upgrade() {
   gem update fasterer
   tldr --update
   ncu -g
-  rbenv install --list | grep -P " 2.3.*$" | tail -1 | grep -v "2.3.8$"
+  rbenv install --list-all | grep -P " 2.5.*$" | tail -1 | grep -v "2.5.8$"
   nvm ls-remote | grep "Latest LTS: Dubnium" | grep -v '\->'
   cd ~/yogurt && bufo reset
 }
@@ -157,7 +157,7 @@ alias diff='colordiff'
 alias stg='ssh wowbagger@vms.skroutz.gr'
 
 alias yo='cd ~/yogurt'
-alias lossless='~/Downloads/LosslessCut-linux/losslesscut --no-sandbox'
+alias lossless='~/Downloads/LosslessCut-linux/losslesscut'
 
 if [ -n "$DESKTOP_SESSION" ];then
   eval $(gnome-keyring-daemon --start)
