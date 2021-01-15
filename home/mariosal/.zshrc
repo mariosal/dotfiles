@@ -7,12 +7,12 @@ export ZSH=$HOME/.oh-my-zsh
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
-# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
+# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="gentoo"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
-# a theme from this variable instead of looking in ~/.oh-my-zsh/themes/
+# a theme from this variable instead of looking in $ZSH/themes/
 # If set to an empty array, this variable will have no effect.
 # ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
@@ -64,11 +64,11 @@ HIST_STAMPS="yyyy-mm-dd"
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
 # Which plugins would you like to load?
-# Standard plugins can be found in ~/.oh-my-zsh/plugins/*
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+# Standard plugins can be found in $ZSH/plugins/
+# Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(bundler colored-man-pages copyfile emacs extract fzf git gitfast git-extras gitignore nvm rails rbenv)
+plugins=(bundler colored-man-pages copyfile extract fzf git gitfast git-extras gitignore nvm rails rbenv vscode)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -89,6 +89,7 @@ source $ZSH/oh-my-zsh.sh
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
+export EDITOR="$VSCODE -w"
 export CC=clang
 export CXX=clang++
 export AR=llvm-ar
@@ -118,8 +119,8 @@ ccl() {
 upgrade() {
   sudo zsh -c 'apt update && apt -y full-upgrade && apt -y autoremove && apt -y clean && fwupdmgr refresh && fwupdmgr update'
   omz update
-  cd ~/.emacs.d && gl
-  command emacs --batch -l ~/.emacs.d/init.el --eval="(configuration-layer/update-packages t)"
+  #cd ~/.emacs.d && gl
+  #command emacs --batch -l ~/.emacs.d/init.el --eval="(configuration-layer/update-packages t)"
   cd ~/.nvm && gl
   cd ~/.rbenv && gl
   cd ~/.rbenv/plugins/ruby-build && gl
@@ -151,15 +152,10 @@ alias l="ls -lah --group-directories-first"
 alias val='valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes --verbose'
 alias by='bi && yarn'
 alias o='xdg-open'
-alias rs='bin/rails server webrick -b 0.0.0.0 -p 3000'
+alias rs='rails server webrick -b 0.0.0.0 -p 3000'
 alias ys='overmind s -l webpack,webpack-ssr,hypernova'
 alias diff='colordiff'
 alias stg='ssh wowbagger@vms.skroutz.gr'
 
 alias yo='cd ~/yogurt'
 alias lossless='~/Downloads/LosslessCut-linux/losslesscut'
-
-if [ -n "$DESKTOP_SESSION" ];then
-  eval $(gnome-keyring-daemon --start)
-  export SSH_AUTH_SOCK
-fi
