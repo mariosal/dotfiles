@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=$PATH:$HOME/go/bin:$HOME/.cargo/bin
+# export PATH=$PATH:$HOME/go/bin:$HOME/.cargo/bin
 
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
@@ -45,6 +45,8 @@ DISABLE_UPDATE_PROMPT="true"
 ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
+# Caution: this setting can cause issues with multiline prompts (zsh 5.7.1 and newer seem to work)
+# See https://github.com/ohmyzsh/ohmyzsh/issues/5765
 # COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
@@ -68,7 +70,7 @@ HIST_STAMPS="yyyy-mm-dd"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(bundler colored-man-pages copyfile extract fzf git gitfast git-extras gitignore nvm rails rbenv vscode)
+plugins=(brew bundler colored-man-pages copyfile extract fzf git gitfast git-extras gitignore nvm rails rbenv vscode)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -89,16 +91,6 @@ source $ZSH/oh-my-zsh.sh
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
-export EDITOR="$VSCODE -w"
-export CC=clang
-export CXX=clang++
-export AR=llvm-ar
-export NM=llvm-nm
-export RANLIB=llvm-ranlib
-export CFLAGS="-march=native -O3 -pipe -flto=thin"
-export CXXFLAGS="-march=native -O3 -pipe -stdlib=libc++ -flto=thin"
-export LDFLAGS="-march=native -O3 -pipe -stdlib=libc++ -flto=thin -fuse-ld=lld"
-
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
@@ -117,10 +109,7 @@ ccl() {
 }
 
 upgrade() {
-  sudo zsh -c 'apt update && apt -y full-upgrade && apt -y autoremove && apt -y clean && fwupdmgr refresh && fwupdmgr update'
   omz update
-  #cd ~/.emacs.d && gl
-  #command emacs --batch -l ~/.emacs.d/init.el --eval="(configuration-layer/update-packages t)"
   cd ~/.nvm && gl
   cd ~/.rbenv && gl
   cd ~/.rbenv/plugins/ruby-build && gl
@@ -130,32 +119,8 @@ upgrade() {
   ncu -g
   rbenv install --list-all | grep -P " 2.5.*$" | tail -1 | grep -v "2.5.8$"
   nvm ls-remote | grep "Latest LTS: Dubnium" | grep -v '\->'
-  cd ~/yogurt && bufo reset
-}
-
-fontclear() {
-  sudo zsh -c 'fc-cache -f && dpkg-reconfigure fontconfig'
-  fc-cache -f
-  rm -rf ~/.cache/fontconfig
-}
-
-es() {
-  command emacs --daemon --insecure && emacs
-}
-
-ek() {
-  killall -9 emacs
 }
 
 alias rm='rm -i'
-alias l="ls -lah --group-directories-first"
 alias val='valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes --verbose'
-alias by='bi && yarn'
-alias o='xdg-open'
-alias rs='rails server webrick -b 0.0.0.0 -p 3000'
-alias ys='overmind s -l webpack,webpack-ssr,hypernova'
 alias diff='colordiff'
-alias stg='ssh wowbagger@vms.skroutz.gr'
-
-alias yo='cd ~/yogurt'
-alias lossless='~/Downloads/LosslessCut-linux/losslesscut'
